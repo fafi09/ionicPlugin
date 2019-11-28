@@ -1,0 +1,306 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>tab5</ion-title>
+  </ion-toolbar>
+</ion-header>
+<!-- Default Refresher -->
+<!-- <ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+  </ion-content> -->
+  
+  <!-- Custom Refresher Properties -->
+  <!-- <ion-content>
+    <ion-refresher slot="fixed" pullFactor="0.5" pullMin="100" pullMax="200">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+  </ion-content> -->
+  
+  <!-- Custom Refresher Content -->
+  <ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content
+        pullingIcon="arrow-dropdown"
+        pullingText="Pull to refresh"
+        refreshingSpinner="circles"
+        refreshingText="Refreshing...">
+      </ion-refresher-content>
+    </ion-refresher>
+  </ion-content>
+<ion-content>
+  <ion-item>
+    <ion-label class="ion-text-wrap">
+      上面的空白区域可以向下拉取，
+      对于添加菜单本系统的menu组件并没有用到，而是在
+      app.component.html中追加菜单html,在tab5的ts中追加
+      相关事件
+    </ion-label>
+  </ion-item>
+  <ion-menu-button menu="end"></ion-menu-button>
+  <ion-button (click)="checkFile()" expand="block">
+    Toggle Infinite Scroll
+  </ion-button>
+  <ion-button (click)="toggleInfiniteScroll()" expand="block">
+    Toggle Infinite Scroll
+  </ion-button>
+  <ion-button (click)="openFirst()" expand="block">
+    openFirst
+  </ion-button>
+  <ion-button (click)="openEnd()" expand="block">
+    openEnd
+  </ion-button>
+  <ion-button (click)="openCustom()" expand="block">
+    openCustom
+  </ion-button>
+  <ion-button (click)="presentModal()" expand="block">
+    modalpage
+  </ion-button>
+  <ion-button (click)="presentPopover($event)" expand="block">
+    Popover
+  </ion-button>
+  <ion-button (click)="presentLoading()" expand="block">
+    presentLoading
+  </ion-button>
+  <ion-button (click)="presentLoadingWithOptions()" expand="block">
+    presentLoadingWithOptions
+  </ion-button>
+  <ion-button (click)="pSubmit()" expand="block">
+    psubmit
+  </ion-button>
+  <!-- Default reorder icon, end aligned items -->
+
+  <ion-list>
+      <ion-item>
+        <ion-range color="danger" pin="true" #ionRange1></ion-range>
+      </ion-item>
+    
+      <ion-item>
+        <ion-range min="-200" max="200" color="secondary">
+          <ion-label slot="start">-200</ion-label>
+          <ion-label slot="end">200</ion-label>
+        </ion-range>
+      </ion-item>
+    
+      <ion-item>
+        <ion-range min="20" max="80" step="2">
+          <ion-icon size="small" slot="start" name="sunny"></ion-icon>
+          <ion-icon slot="end" name="sunny"></ion-icon>
+        </ion-range>
+      </ion-item>
+    
+      <ion-item>
+        <ion-range min="1000" max="2000" step="100" snaps="true" color="secondary"></ion-range>
+      </ion-item>
+    
+      <ion-item>
+        <ion-range min="1000" max="2000" step="100" snaps="true" ticks="false" color="secondary"></ion-range>
+      </ion-item>
+    
+      <ion-item>
+        <ion-range dualKnobs="true" min="21" max="72" step="3" snaps="true"></ion-range>
+      </ion-item>
+    </ion-list>
+  <ion-list>
+      <ion-radio-group  allow-empty-selection>
+        <ion-list-header>
+          <ion-label>Name</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>Biff</ion-label>
+          <ion-radio slot="start" value="biff" checked></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Griff</ion-label>
+          <ion-radio slot="start" value="griff"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Buford</ion-label>
+          <ion-radio slot="start" value="buford"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+  <!-- Data to display after skeleton screen -->
+  <div *ngIf="data">
+    <div class="ion-padding">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac eros est. Cras iaculis pulvinar arcu non
+      vehicula. Fusce at quam a eros malesuada condimentum. Aliquam tincidunt tincidunt vehicula.
+    </div>
+
+    <ion-list>
+      <ion-list-header>Data</ion-list-header>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        </ion-avatar>
+        <ion-label>
+          <h3>
+            {{ data.heading }}
+          </h3>
+          <p>
+            {{ data.para1 }}
+          </p>
+          <p>
+            {{ data.para2 }}
+          </p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            {{ data.heading }}
+          </h3>
+          <p>
+            {{ data.para1 }}
+          </p>
+          <p>
+            {{ data.para2 }}
+          </p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="call" slot="start"></ion-icon>
+        <ion-label>
+          <h3>
+            {{ data.heading }}
+          </h3>
+          <p>
+            {{ data.para1 }}
+          </p>
+          <p>
+            {{ data.para2 }}
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <!-- Skeleton screen -->
+  <div *ngIf="!data">
+    <div class="ion-padding custom-skeleton">
+      <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+      <ion-skeleton-text animated></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+    </div>
+
+    <ion-list>
+      <ion-list-header>
+        <ion-skeleton-text animated style="width: 20%"></ion-skeleton-text>
+      </ion-list-header>
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-avatar>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-skeleton-text animated style="width: 27px; height: 27px" slot="start"></ion-skeleton-text>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+
+
+
+
+  <!-- Default Progressbar -->
+  <ion-progress-bar></ion-progress-bar>
+
+  <!-- Default Progressbar with 50 percent -->
+  <ion-progress-bar value="0.5"></ion-progress-bar>
+
+  <!-- Colorize Progressbar -->
+  <ion-progress-bar color="danger" value="0.5"></ion-progress-bar>
+  <ion-progress-bar color="secondary" value="0.5"></ion-progress-bar>
+
+  <!-- Other types -->
+  <ion-progress-bar value="0.25" buffer="0.5"></ion-progress-bar>
+  <ion-progress-bar type="indeterminate"></ion-progress-bar>
+  <ion-progress-bar type="indeterminate" reversed="true"></ion-progress-bar>
+
+  <!-- Default Spinner -->
+  <ion-spinner></ion-spinner>
+
+  <!-- Lines -->
+  <ion-spinner name="lines"></ion-spinner>
+
+  <!-- Lines Small -->
+  <ion-spinner name="lines-small"></ion-spinner>
+
+  <!-- Dots -->
+  <ion-spinner name="dots"></ion-spinner>
+
+  <!-- Bubbles -->
+  <ion-spinner name="bubbles"></ion-spinner>
+
+  <!-- Circles -->
+  <ion-spinner name="circles"></ion-spinner>
+
+  <!-- Crescent -->
+  <ion-spinner name="crescent"></ion-spinner>
+
+  <!-- Paused Default Spinner -->
+  <ion-spinner paused></ion-spinner>
+
+  <ion-list *ngFor="let user of users">
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{user.name}}</h2>
+        <p>Created {{user.age}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

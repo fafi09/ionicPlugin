@@ -1,0 +1,761 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab One
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+      <ion-img src="/assets/shapes.svg"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle>Get Started</ion-card-subtitle>
+        <ion-card-title>Welcome to Ionic</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-list lines="inset">
+      <ion-list-header>
+        <ion-label>Resources</ion-label>
+      </ion-list-header>
+      <ion-item href="https://ionicframework.com/docs/">
+        <ion-icon slot="start" color="medium" name="book"></ion-icon>
+        <ion-label>Ionic Documentation</ion-label>
+        <ion-label>1</ion-label>
+        <ion-label>tom1</ion-label>
+      </ion-item>
+      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
+        <ion-icon slot="start" color="medium" name="build"></ion-icon>
+        <ion-label>Scaffold Out Your App</ion-label>
+        <ion-label>1</ion-label>
+        <ion-label>tom1</ion-label>
+      </ion-item>
+      <ion-item href="https://ionicframework.com/docs/layout/structure">
+        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
+        <ion-label>Change Your App Layout</ion-label>
+        <ion-label>1</ion-label>
+        <ion-label>tom1</ion-label>
+      </ion-item>
+      <ion-item href="https://ionicframework.com/docs/theming/basics">
+        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
+        <ion-label>Theme Your App</ion-label>
+        <ion-label>1</ion-label>
+        <ion-label>tom1</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-list-header>
+        Items with Labels
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Label</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon slot="end" name="logo-ionic"></ion-icon>
+        <ion-label>Label with Icon</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-list-header>
+        Color Items
+      </ion-list-header>
+      <ion-item color="primary">
+        <ion-label>Primary</ion-label>
+      </ion-item>
+
+      <ion-item color="secondary">
+        <ion-label>Secondary</ion-label>
+      </ion-item>
+
+      <ion-item color="tertiary">
+        <ion-label>Tertiary</ion-label>
+      </ion-item>
+
+      <ion-item color="success">
+        <ion-label>Success</ion-label>
+      </ion-item>
+
+      <ion-item color="warning">
+        <ion-label>Warning</ion-label>
+      </ion-item>
+
+      <ion-item color="danger">
+        <ion-label>Danger</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-list-header>
+        Group with Divider
+      </ion-list-header>
+
+      <ion-item-group>
+        <ion-item-divider>
+          <ion-label>A</ion-label>
+        </ion-item-divider>
+
+        <ion-item>
+          <ion-label>Adam</ion-label>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label>Alan</ion-label>
+        </ion-item>
+
+        <ion-item-divider>
+          <ion-label>B</ion-label>
+        </ion-item-divider>
+
+        <ion-item lines="none">
+          <ion-label>Brianna</ion-label>
+        </ion-item>
+
+        <ion-item-divider>
+          <ion-label>C</ion-label>
+        </ion-item-divider>
+
+        <ion-item lines="none">
+          <ion-label>Carla</ion-label>
+        </ion-item>
+      </ion-item-group>
+    </ion-list>
+
+    <ion-list>
+      <ion-list-header>
+        Sliding Item
+      </ion-list-header>
+
+      <ion-item-sliding>
+        <ion-item>
+          <ion-label>New Message</ion-label>
+        </ion-item>
+
+        <ion-item-options side="start">
+          <ion-item-option color="primary">Mark Unread</ion-item-option>
+        </ion-item-options>
+
+        <ion-item-options side="end">
+          <ion-item-option color="danger">Delete</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+
+      <ion-item-sliding>
+        <ion-item>
+          <ion-label>New Message</ion-label>
+        </ion-item>
+
+        <ion-item-options side="start">
+          <ion-item-option color="primary">Mark Unread</ion-item-option>
+        </ion-item-options>
+
+        <ion-item-options side="end">
+          <ion-item-option color="danger">Delete</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+
+    <ion-list>
+      <ion-list-header>
+        Notes
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Primary Note</ion-label>
+        <ion-note slot="end" color="primary">99</ion-note>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Secondary Note</ion-label>
+        <ion-note slot="end" color="secondary">99</ion-note>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Tertiary Note</ion-label>
+        <ion-note slot="end" color="tertiary">99</ion-note>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Success Note</ion-label>
+        <ion-note slot="end" color="success">99</ion-note>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Warning Note</ion-label>
+        <ion-note slot="end" color="warning">99</ion-note>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Danger Note</ion-label>
+        <ion-note slot="end" color="danger">99</ion-note>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-list-header>
+        Detail Arrows
+      </ion-list-header>
+    <ion-item detail>
+      <ion-label>
+        Standard Item with Detail Arrow
+      </ion-label>
+    </ion-item>
+    
+    <ion-item  detail>
+      <ion-label>
+        Button Item with Detail Arrow
+      </ion-label>
+    </ion-item>
+    
+    <ion-item detail="false" href="https://www.ionicframework.com">
+      <ion-label>
+        Anchor Item with no Detail Arrow
+      </ion-label>
+    </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          Item
+        </ion-label>
+      </ion-item>
+    
+      <ion-item lines="none">
+        <ion-label>
+          No Lines Item
+        </ion-label>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label class="ion-text-wrap">
+        Multiline text that should wrap when it is too long
+        to fit on one line in the item.
+        </ion-label>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label class="ion-text-wrap">
+          <ion-text color="primary">
+            <h3>H3 Primary Title</h3>
+          </ion-text>
+          <p>Paragraph line 1</p>
+          <ion-text color="secondary">
+            <p>Paragraph line 2 secondary</p>
+          </ion-text>
+        </ion-label>
+      </ion-item>
+    
+      <ion-item lines="full">
+        <ion-label>
+          Item with Full Lines
+        </ion-label>
+      </ion-item>
+    
+    </ion-list>
+    <!-- Item Inset Lines -->
+<ion-item lines="inset">
+  <ion-label>Item Lines Inset</ion-label>
+</ion-item>
+
+<!-- Item Full Lines -->
+<ion-item lines="full">
+  <ion-label>Item Lines Full</ion-label>
+</ion-item>
+
+<!-- Item None Lines -->
+<ion-item lines="none">
+  <ion-label>Item Lines None</ion-label>
+</ion-item>
+
+<!-- List Full Lines -->
+<ion-list lines="full">
+  <ion-item>
+    <ion-label>Full Lines Item 1</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Full Lines Item 2</ion-label>
+  </ion-item>
+</ion-list>
+
+<!-- List Inset Lines -->
+<ion-list lines="inset">
+  <ion-item>
+    <ion-label>Inset Lines Item 1</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Inset Lines Item 2</ion-label>
+  </ion-item>
+</ion-list>
+
+<!-- List No Lines -->
+<ion-list lines="none">
+  <ion-item>
+    <ion-label>No lines Item 1</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>No lines Item 2</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>No lines Item 3</ion-label>
+  </ion-item>
+</ion-list>
+<ion-item (click)="testClick()">
+  <ion-avatar slot="start">
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
+  </ion-avatar>
+  <ion-label>
+    Avatar Start, Button Item
+  </ion-label>
+</ion-item>
+
+<ion-item href="#">
+  <ion-label>
+    Thumbnail End, Anchor Item
+  </ion-label>
+  <ion-thumbnail slot="end">
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
+  </ion-thumbnail>
+</ion-item>
+
+<ion-item>
+  <ion-thumbnail slot="start">
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
+  </ion-thumbnail>
+  <ion-label>
+    <h2>H2 Title Text</h2>
+    <p>Button on right</p>
+  </ion-label>
+  <ion-button fill="outline" slot="end">View</ion-button>
+</ion-item>
+
+<ion-item (click)="testClick()">
+  <ion-thumbnail slot="start">
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
+  </ion-thumbnail>
+  <ion-label>
+    <h3>H3 Title Text</h3>
+    <p>Icon on right</p>
+  </ion-label>
+  <ion-icon name="close-circle" slot="end"></ion-icon>
+</ion-item>
+
+
+<ion-item>
+  <ion-button slot="start">
+    Start
+  </ion-button>
+  <ion-label>Button Start/End</ion-label>
+  <ion-button slot="end">
+    End
+  </ion-button>
+</ion-item>
+
+<ion-item>
+  <ion-button slot="start">
+    Start Icon
+    <ion-icon name="home" slot="end"></ion-icon>
+  </ion-button>
+  <ion-label>Buttons with Icons</ion-label>
+  <ion-button slot="end">
+    <ion-icon name="star" slot="end"></ion-icon>
+    End Icon
+  </ion-button>
+</ion-item>
+
+<ion-item>
+  <ion-button slot="start">
+    <ion-icon slot="icon-only" name="navigate"></ion-icon>
+  </ion-button>
+  <ion-label>Icon only Buttons</ion-label>
+  <ion-button slot="end">
+    <ion-icon slot="icon-only" name="star"></ion-icon>
+  </ion-button>
+</ion-item>
+
+<ion-item>
+  <ion-label>
+    Icon End
+  </ion-label>
+  <ion-icon name="information-circle" slot="end"></ion-icon>
+</ion-item>
+
+<ion-item>
+  <ion-label>
+    Large Icon End
+  </ion-label>
+  <ion-icon name="information-circle" size="large" slot="end"></ion-icon>
+</ion-item>
+
+<ion-item>
+  <ion-label>
+    Small Icon End
+  </ion-label>
+  <ion-icon name="information-circle" size="small" slot="end"></ion-icon>
+</ion-item>
+
+<ion-item>
+  <ion-icon name="star" slot="start"></ion-icon>
+  <ion-label>
+    Icon Start
+  </ion-label>
+</ion-item>
+
+<ion-item>
+  <ion-label>
+    Two Icons End
+  </ion-label>
+  <ion-icon name="checkmark-circle" slot="end"></ion-icon>
+  <ion-icon name="shuffle" slot="end"></ion-icon>
+</ion-item>
+
+
+
+<ion-item>
+  <ion-label position="floating">Datetime</ion-label>
+  <ion-datetime></ion-datetime>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Select</ion-label>
+  <ion-select>
+    <ion-select-option value="">No Game Console</ion-select-option>
+    <ion-select-option value="nes">NES</ion-select-option>
+    <ion-select-option value="n64" selected>Nintendo64</ion-select-option>
+    <ion-select-option value="ps">PlayStation</ion-select-option>
+    <ion-select-option value="genesis">Sega Genesis</ion-select-option>
+    <ion-select-option value="saturn">Sega Saturn</ion-select-option>
+    <ion-select-option value="snes">SNES</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label>Toggle</ion-label>
+  <ion-toggle slot="end"></ion-toggle>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Floating Input</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label>Input (placeholder)</ion-label>
+  <ion-input placeholder="Placeholder"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label>Checkbox</ion-label>
+  <ion-checkbox slot="start"></ion-checkbox>
+</ion-item>
+
+<ion-item>
+  <ion-label>Range</ion-label>
+  <ion-range></ion-range>
+</ion-item>
+
+<ion-item-divider>
+    <ion-label>
+      Basic Item Divider
+    </ion-label>
+  </ion-item-divider>
+  
+  <ion-item-divider color="secondary">
+    <ion-label>
+      Secondary Item Divider
+    </ion-label>
+  </ion-item-divider>
+  
+  <!-- Item Dividers in a List -->
+  <ion-list>
+    <ion-item-divider>
+      <ion-label>
+        Section A
+      </ion-label>
+    </ion-item-divider>
+  
+    <ion-item><ion-label>A1</ion-label></ion-item>
+    <ion-item><ion-label>A2</ion-label></ion-item>
+    <ion-item><ion-label>A3</ion-label></ion-item>
+    <ion-item><ion-label>A4</ion-label></ion-item>
+    <ion-item><ion-label>A5</ion-label></ion-item>
+  
+    <ion-item-divider>
+      <ion-label>
+        Section B
+      </ion-label>
+    </ion-item-divider>
+  
+    <ion-item><ion-label>B1</ion-label></ion-item>
+    <ion-item><ion-label>B2</ion-label></ion-item>
+    <ion-item><ion-label>B3</ion-label></ion-item>
+    <ion-item><ion-label>B4</ion-label></ion-item>
+    <ion-item><ion-label>B5</ion-label></ion-item>
+  </ion-list>
+
+
+
+
+
+  <ion-item-group>
+      <ion-item-divider>
+        <ion-label>A</ion-label>
+      </ion-item-divider>
+    
+      <ion-item>
+        <ion-label>Angola</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Argentina</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Armenia</ion-label>
+      </ion-item>
+    </ion-item-group>
+    
+    <ion-item-group>
+      <ion-item-divider>
+        <ion-label>B</ion-label>
+      </ion-item-divider>
+    
+      <ion-item>
+        <ion-label>Bangladesh</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Belarus</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Belgium</ion-label>
+      </ion-item>
+    </ion-item-group>
+    
+    
+    <!-- They can also be used to group sliding items -->
+    <ion-item-group>
+      <ion-item-divider>
+        <ion-label>
+          Fruits
+        </ion-label>
+      </ion-item-divider>
+    
+      <ion-item-sliding>
+        <ion-item>
+          <ion-label>
+            <h3>Grapes</h3>
+          </ion-label>
+        </ion-item>
+        <ion-item-options>
+          <ion-item-option>
+            Favorite
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    
+      <ion-item-sliding>
+        <ion-item>
+          <ion-label>
+            <h3>Apples</h3>
+          </ion-label>
+        </ion-item>
+        <ion-item-options>
+          <ion-item-option>
+            Favorite
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-item-group>
+    
+    <ion-item-group>
+      <ion-item-divider>
+        <ion-label>
+          Vegetables
+        </ion-label>
+      </ion-item-divider>
+    
+      <ion-item-sliding>
+        <ion-item>
+          <ion-label>
+            <h3>Carrots</h3>
+          </ion-label>
+        </ion-item>
+        <ion-item-options>
+          <ion-item-option>
+            Favorite
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    
+      <ion-item-sliding>
+        <ion-item>
+          <ion-label>
+            <h3>Celery</h3>
+          </ion-label>
+        </ion-item>
+        <ion-item-options>
+          <ion-item-option>
+            Favorite
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-item-group>
+
+
+    <ion-list>
+        <!-- Sliding item with text options on both sides -->
+        <ion-item-sliding>
+          <ion-item-options side="start">
+            <ion-item-option>Favorite</ion-item-option>
+            <ion-item-option color="danger" >Share</ion-item-option>
+          </ion-item-options>
+      
+          <ion-item>
+            <ion-label>Item Options</ion-label>
+          </ion-item>
+      
+          <ion-item-options side="end">
+            <ion-item-option >Unread</ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+      
+        <!-- Sliding item with expandable options on both sides -->
+        <ion-item-sliding>
+          <ion-item-options side="start">
+            <ion-item-option color="danger" expandable>
+              Delete
+            </ion-item-option>
+          </ion-item-options>
+      
+          <ion-item>
+            <ion-label>Expandable Options</ion-label>
+          </ion-item>
+      
+          <ion-item-options side="end">
+            <ion-item-option color="tertiary" expandable>
+              Archive
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+      
+        <!-- Multi-line sliding item with icon options on both sides -->
+        <ion-item-sliding id="item100">
+          <ion-item href="#">
+            <ion-label>
+              <h2>HubStruck Notifications</h2>
+              <p>A new message in your network</p>
+              <p>Oceanic Next has joined your network</p>
+            </ion-label>
+            <ion-note slot="end">
+              10:45 AM
+            </ion-note>
+          </ion-item>
+      
+          <ion-item-options side="start">
+            <ion-item-option>
+              <ion-icon slot="icon-only" name="heart"></ion-icon>
+            </ion-item-option>
+          </ion-item-options>
+      
+          <ion-item-options side="end">
+            <ion-item-option color="danger">
+              <ion-icon slot="icon-only" name="trash"></ion-icon>
+            </ion-item-option>
+            <ion-item-option>
+              <ion-icon slot="icon-only" name="star"></ion-icon>
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+      
+        <!-- Sliding item with icon start options on end side -->
+        <ion-item-sliding>
+          <ion-item>
+            <ion-label>
+              Sliding Item, Icons Start
+            </ion-label>
+          </ion-item>
+          <ion-item-options>
+            <ion-item-option color="primary">
+              <ion-icon slot="start" name="more"></ion-icon>
+              More
+            </ion-item-option>
+            <ion-item-option color="secondary">
+              <ion-icon slot="start" name="archive"></ion-icon>
+              Archive
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+      
+        <!-- Sliding item with icon end options on end side -->
+        <ion-item-sliding>
+          <ion-item>
+            <ion-label>
+              Sliding Item, Icons End
+            </ion-label>
+          </ion-item>
+          <ion-item-options>
+            <ion-item-option color="primary">
+              <ion-icon slot="end" name="more"></ion-icon>
+              More
+            </ion-item-option>
+            <ion-item-option color="secondary">
+              <ion-icon slot="end" name="archive"></ion-icon>
+              Archive
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+      
+        <!-- Sliding item with icon top options on end side -->
+        <ion-item-sliding>
+          <ion-item>
+            <ion-label>
+              Sliding Item, Icons Top
+            </ion-label>
+          </ion-item>
+          <ion-item-options>
+            <ion-item-option color="primary">
+              <ion-icon slot="top" name="more"></ion-icon>
+              More
+            </ion-item-option>
+            <ion-item-option color="secondary">
+              <ion-icon slot="top" name="archive"></ion-icon>
+              Archive
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+      
+        <!-- Sliding item with icon bottom options on end side -->
+        <ion-item-sliding>
+          <ion-item>
+            <ion-label>
+              Sliding Item, Icons Bottom
+            </ion-label>
+          </ion-item>
+          <ion-item-options>
+            <ion-item-option color="primary">
+              <ion-icon slot="bottom" name="more"></ion-icon>
+              More
+            </ion-item-option>
+            <ion-item-option color="secondary">
+              <ion-icon slot="bottom" name="archive"></ion-icon>
+              Archive
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+
+      <ion-virtual-scroll [items]="items" approxItemHeight="320px">
+          <ion-card *virtualItem="let item; let itemBounds = bounds;">
+            <div>
+              <ion-img [src]="item.imgSrc"  [alt]="item.name"></ion-img>
+            </div>
+          <ion-card-header>
+            <ion-card-title>{{ item.name }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>{{ item.content }}</ion-card-content>
+          </ion-card>
+        </ion-virtual-scroll>
+</ion-content>
