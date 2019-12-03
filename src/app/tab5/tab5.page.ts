@@ -8,6 +8,7 @@ import { PopoverComponent } from "../popover/popover.component";
 import { LoadingController } from '@ionic/angular';
 import { File } from '@ionic-native/file/ngx';
 import { ToastController } from '@ionic/angular';
+declare let cordova: any;
 @Component({
   selector: 'app-tab5',
   templateUrl: './tab5.page.html',
@@ -129,19 +130,65 @@ export class Tab5Page implements OnInit {
   checkFile() {
     //let promise = this.file.checkDir(this.file.dataDirectory, 'mydir');
     let promise = this.file.checkDir(this.file.dataDirectory, 'data');
-    promise.then(_ => {this.presentToast('Directory exists');
-    console.log('Directory exists');})
-    .catch(err =>
-      {this.presentToast('Directory doesnot exist');console.log('Directory doesnot exist');});
+    promise.then(_ => {
+      this.presentToast(this.file.dataDirectory + 'Directory exists');
+      console.log('Directory exists');
+    })
+      .catch(err => { this.presentToast('Directory doesnot exist'); console.log('Directory doesnot exist'); });
     //this.presentToast('Directory exists');
   }
-  
-  async presentToast(msg:string) {
+
+
+  readFile() {
+    let promise = this.file.readAsText(this.file.externalRootDirectory, 'pandian_8.txt');
+    promise.then((lines) => { console.log(lines) });
+  }
+
+  readFile2() {
+    let promise = this.file.resolveLocalFilesystemUrl(this.file.externalRootDirectory + 'pandian_8.txt');
+    promise.then((value) => {this.readFileProcess(value)});
+  }
+
+  readFileInner(fileEntry) {
+
+    fileEntry.file(function (file) {
+      var reader = new FileReader();
+
+      reader.onloadend = function () {
+        console.log("Successful file read: " + this.result);
+      };
+
+      reader.readAsText(file);
+
+    }, this.onErrorReadFile);
+  }
+
+  readFileProcess(fileEntry) {
+
+    fileEntry.file(function (file) {
+      var reader = new FileReader();
+
+      reader.onprogress = function (value) {
+        console.log("onprogress file read: " + this.result + "--end" + value);
+      };
+
+      reader.readAsText(file,'gbk');
+
+    }, this.onErrorReadFile);
+  }
+
+  onErrorReadFile(err) {
+    console.log(err);
+  }
+  async presentToast(msg: string) {
     const toast = await this.toastController.create({
       message: msg,
       duration: 2000
     });
     toast.present();
   }
-  
+
+  callTestPlugin(){
+    cordova.plugins.RandomReader.hello("今天好运气，一老狼请吃鸡呀！",result=>console.log(result),error=>console.log(error));
+  }
 }
