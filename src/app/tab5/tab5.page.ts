@@ -191,4 +191,7 @@ export class Tab5Page implements OnInit {
   callTestPlugin(){
     cordova.plugins.RandomReader.hello("今天好运气，一老狼请吃鸡呀！",result=>console.log(result),error=>console.log(error));
   }
+  randomReader() {
+    cordova.plugins.RandomReader.randomReaderByKey("2222080911000001",this.file.externalRootDirectory + 'pandian_8.txt',result=>console.log(result),error=>console.log(error));
+  }
 }
